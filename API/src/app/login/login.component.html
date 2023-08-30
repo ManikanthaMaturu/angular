@@ -1,0 +1,54 @@
+<ng-template [ngIf]="displayName ==='login'">
+
+<form class = "login-form" (ngSubmit) = 'logindetails()'>
+
+    <h2 style="margin-left: 70px;">Login</h2>
+    
+
+
+    <label for = "UserName">UserName :</label>
+    <input type="text" [(ngModel)] = 'UserName' placeholder="Enter your UserName" id = 'UserName' name = 'UserName'><br><br>
+
+
+    <label for = "Password">Password :</label>
+    <input type="text" [(ngModel)] = 'Password' placeholder="Enter your password" id = 'Password' name = 'Password'>
+    
+
+
+    <button style = 'margin-top: 15px; width: auto; margin-left: 115px; margin-bottom: 15px' type="submit" >Login</button>
+    <p>{{loginResponseMessage}}</p>
+    <a routerLink="/Registration"  routerLinkActive="active" style="width: auto; margin: 10px;">Registration</a>
+</form>
+</ng-template>
+
+
+<ng-template [ngIf]="displayName ==='view'">
+  <!-- <p>{{loginResponseMessage}}</p> -->
+
+  <h2 style="margin-left: 105px;">Home</h2>
+  <button style="margin-top: 15px;width: auto;margin-left: 95px; width: 95px;" type="submit" (click) = 'UserProfile()' >User Profile</button>
+  <button style="margin-top: 15px;width: auto;margin-left: 95px; width: 95px;" type="submit">Campaign</button>
+
+  <!-- <button style="margin-top: 15px;width: auto;margin-left: 95px; width: 95px;" type="submit"(click)="login()">LogOut</button> -->
+  
+</ng-template>
+
+
+<ng-template [ngIf]="displayName === 'UserProfile'">
+    <div>
+      <h2>User Details</h2>
+      <ul>
+        <li *ngFor="let user of result | keyvalue">
+          <div class="user-info">
+            <div><strong>{{ user.key }}</strong> {{ user.value }}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button style="margin-top: 15px;width: auto;margin-left: 95px; width: 95px;" type="submit" (click)="view()">Back</button>
+    <!-- <button style="margin-top: 15px;width: auto;margin-left: 95px; width: 95px;" type="submit" (click)="edit()">edit</button> -->
+</ng-template>
+
+  
+  <!-- <router-outlet></router-outlet> -->
+

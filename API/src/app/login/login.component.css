@@ -1,0 +1,17 @@
+.login-form {
+
+    width: 300px;
+    margin: 20px auto;
+    padding: 100px;
+    background-color: rgb(124, 119, 119);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }

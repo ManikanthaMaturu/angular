@@ -1,0 +1,24 @@
+
+<form class="registration-form" (ngSubmit)="registerdetails()">
+    
+    <h2 style="margin-left: 70px;">Create Account</h2>
+    <h4 style="margin-top: 15px;width: auto;margin-left: 95px;"> {{ registerResponseMessage }} </h4>
+
+
+    <label  for="UserName">UserName</label>
+    <input type="text" [(ngModel)]="UserName" placeholder="Enter your name" id="UserName" name="UserName">
+
+    <label  for="Email">Email</label>
+    <input type="text" [(ngModel)]="Email" placeholder="Enter your Email" id="Email" name="Email">
+
+    
+
+    <label  for="Password">Password</label>
+    <input type="Password" [(ngModel)]="Password" id="Password" name="Password">
+
+
+    <button style="margin-top: 15px;width: auto;margin-left: 115px;margin-bottom: 15px;" type="submit">Submit</button>
+    <!-- <span style="margin-left: 60px;">I have Account?</span><a routerLink="/login">Log In</a> -->
+
+
+</form>
